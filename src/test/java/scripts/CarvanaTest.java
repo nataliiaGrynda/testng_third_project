@@ -1,4 +1,4 @@
-package test;
+package scripts;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -126,12 +126,12 @@ And user should see filter options
        Assert.assertTrue(searchCarsPage.monthlyPayment.get(i).isDisplayed());
        Assert.assertFalse(searchCarsPage.downPaymentInformation.get(i).getText().isEmpty());
        Assert.assertTrue(searchCarsPage.downPaymentInformation.get(i).isDisplayed());
-   Assert.assertTrue(searchCarsPage.shippingInformation.get(i).isDisplayed()); //... 7
-       //  Assert.assertTrue(searchCarsPage.carPrice.get(i).isDisplayed());//....4
+       Assert.assertTrue(searchCarsPage.shippingInformation.get(i).isDisplayed()); //... 7
+       Assert.assertTrue(searchCarsPage.carPrice.get(i).isDisplayed());
+       Assert.assertTrue(Integer.parseInt(searchCarsPage.carPrice.get(i).getText().substring(1).replace(",", ""))> 0);
 
      }
    }
-
   }
 
 

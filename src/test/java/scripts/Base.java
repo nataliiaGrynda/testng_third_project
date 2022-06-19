@@ -1,4 +1,4 @@
-package test;
+package scripts;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
