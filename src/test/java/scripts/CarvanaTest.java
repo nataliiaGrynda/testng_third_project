@@ -99,7 +99,34 @@ And user should see filter options
        Assert.assertEquals(searchCarsPage.filterOptions.get(i).getText(), expectedResult[i]);
      }
    }
-
+/*
+Test Case 6: Test name = Validate the search result tiles
+Test priority = 6
+Given user is on "https://www.carvana.com/"
+When user clicks on "SEARCH CARS" link
+Then user should be routed to "https://www.carvana.com/cars"
+When user enters "mercedes-benz" to the search input box
+And user clicks on "GO" button in the search input box
+Then user should see "mercedes-benz" in the url
+And validate each result tile
+VALIDATION OF EACH TILE INCLUDES BELOW
+Make sure each result tile is displayed with below information
+1. an image
+2. add to favorite button
+3. tile body
+ALSO VALIDATE EACH TILE BODY:
+Make sure each tile body has below information
+1. Inventory type - text should be displayed and should not be null
+2. Year-Make-Model information - text should be displayed and should not be null
+3. Trim-Mileage information - text should be displayed and should not be null
+4. Price - Make sure that each price is more than zero
+5. Monthly Payment information - text should be displayed and should not be null
+6. Down Payment information - text should be displayed and should not be null
+7. Delivery chip must be displayed as “Free Shipping”
+NOTE: After completing all scripts, create an xml file called “test.xml” and make sure that you can run all
+scripts using “mvn test -PRegression”
+NOTE: Push your code to GitHub or GitLab and submit the link of the repo on 06/20/2022,
+ */
    @Test(priority = 6, description = "validate the search result tiles")
    public void searchResultTiles() {
      driver.get("https://www.carvana.com/");
